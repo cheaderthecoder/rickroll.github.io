@@ -3,13 +3,16 @@
 <head>
     <title>Tic Tac Toe</title>
     <style>
+        body { background-color: black; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         #board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .cell { width: 60px; height: 60px; border: 1px solid; text-align: center; line-height: 60px; font-size: 20px; }
+        .cell { width: 60px; height: 60px; border: 1px solid white; text-align: center; line-height: 60px; font-size: 20px; }
+        #restart { margin-top: 20px; color: black; }
     </style>
 </head>
 <body>
     <div id="board"></div>
     <div id="message"></div>
+    <button id="restart" onclick="restartGame()">Restart Game</button>
 
     <script>
         var board = Array(9).fill(null);
@@ -47,6 +50,19 @@
                 combination.every(index => board[index] === player)
             );
         }
+
+        function restartGame() {
+            board = Array(9).fill(null);
+            currentPlayer = 'X';
+            document.getElementById('message').textContent = '';
+            drawBoard();
+        }
+
+        drawBoard();
+    </script>
+</body>
+</html>
+
 
         drawBoard();
     </script>
