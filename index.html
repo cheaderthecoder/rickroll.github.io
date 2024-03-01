@@ -1,1 +1,54 @@
-<!DOCTYPE html> <html> <head>     <meta http-equiv="refresh" content="0; URL=https://https://www.youtube.com/watch?v=dQw4w9WgXcQ" /> </head> <body>     <p>If you are not redirected in five seconds, <a href="https://https://www.youtube.com/watch?v=dQw4w9WgXcQ">click here</a>.</p> </body> </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        #board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .cell { width: 60px; height: 60px; border: 1px solid; text-align: center; line-height: 60px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <div id="board"></div>
+    <div id="message"></div>
+
+    <script>
+        var board = Array(9).fill(null);
+        var currentPlayer = 'X';
+        var winningCombinations = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],  // rows
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],  // columns
+            [0, 4, 8], [2, 4, 6]               // diagonals
+        ];
+
+        function drawBoard() {
+            document.getElementById('board').innerHTML = 
+                board.map((cell, index) => `<div class="cell" onclick="makeMove(${index})">${cell || ''}</div>`).join('');
+        }
+
+        function makeMove(index) {
+            if (board[index] !== null) return;
+            board[index] = currentPlayer;
+            if (checkWin(currentPlayer)) {
+                document.getElementById('message').textContent = currentPlayer + ' wins!';
+                return;
+            }
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            drawBoard();
+            if (currentPlayer === 'O') makeAIMove();
+        }
+
+        function makeAIMove() {
+            var index = board.findIndex(cell => cell === null);
+            if (index !== -1) makeMove(index);
+        }
+
+        function checkWin(player) {
+            return winningCombinations.some(combination =>
+                combination.every(index => board[index] === player)
+            );
+        }
+
+        drawBoard();
+    </script>
+</body>
+</html>
