@@ -9,10 +9,12 @@
         #restart { position: absolute; top: 10px; right: 10px; color: black; }
         #message { margin-bottom: 20px; }
         #container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        #score { margin-bottom: 20px; }
     </style>
 </head>
 <body>
     <div id="container">
+        <div id="score">Player: 0 AI: 0</div>
         <div id="message"></div>
         <div id="board"></div>
     </div>
@@ -21,6 +23,8 @@
     <script>
         var board = Array(9).fill(null);
         var currentPlayer = 'X';
+        var playerScore = 0;
+        var aiScore = 0;
         var winningCombinations = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8],  // rows
             [0, 3, 6], [1, 4, 7], [2, 5, 8],  // columns
@@ -38,6 +42,12 @@
             drawBoard();
             if (checkWin(currentPlayer)) {
                 document.getElementById('message').textContent = currentPlayer + ' wins!';
+                if (currentPlayer === 'X') {
+                    playerScore++;
+                } else {
+                    aiScore++;
+                }
+                document.getElementById('score').textContent = 'Player: ' + playerScore + ' AI: ' + aiScore;
                 setTimeout(restartGame, 2000);
                 return;
             }
@@ -64,11 +74,6 @@
         }
 
         drawBoard();
-    </script>
-</body>
-</html>
-
-
     </script>
 </body>
 </html>
