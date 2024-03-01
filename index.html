@@ -32,12 +32,13 @@
         function makeMove(index) {
             if (board[index] !== null) return;
             board[index] = currentPlayer;
+            drawBoard();
             if (checkWin(currentPlayer)) {
                 document.getElementById('message').textContent = currentPlayer + ' wins!';
+                setTimeout(restartGame, 2000);
                 return;
             }
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-            drawBoard();
             if (currentPlayer === 'O') makeAIMove();
         }
 
