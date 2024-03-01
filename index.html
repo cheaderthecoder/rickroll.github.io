@@ -52,6 +52,11 @@
                 setTimeout(restartGame, 1000);
                 return;
             }
+            if (isStalemate()) {
+                document.getElementById('message').textContent = 'Stalemate!';
+                setTimeout(restartGame, 1000);
+                return;
+            }
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
             if (currentPlayer === 'O') makeAIMove();
         }
@@ -71,6 +76,10 @@
             return winningCombinations.some(combination =>
                 combination.every(index => board[index] === player)
             );
+        }
+
+        function isStalemate() {
+            return board.every(cell => cell !== null);
         }
 
         function restartGame() {
