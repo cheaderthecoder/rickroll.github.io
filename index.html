@@ -8,11 +8,14 @@
         .cell { width: 60px; height: 60px; border: 1px solid white; text-align: center; line-height: 60px; font-size: 20px; }
         #restart { position: absolute; top: 10px; right: 10px; color: black; }
         #message { margin-bottom: 20px; }
+        #container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     </style>
 </head>
 <body>
-    <div id="message"></div>
-    <div id="board"></div>
+    <div id="container">
+        <div id="message"></div>
+        <div id="board"></div>
+    </div>
     <button id="restart" onclick="restartGame()">Restart Game</button>
 
     <script>
