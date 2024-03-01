@@ -56,8 +56,13 @@
         }
 
         function makeAIMove() {
-            var index = board.findIndex(cell => cell === null);
-            if (index !== -1) makeMove(index);
+            var preferredMoves = [4, 0, 2, 6, 8, 1, 3, 5, 7];
+            for (var i = 0; i < preferredMoves.length; i++) {
+                if (board[preferredMoves[i]] === null) {
+                    makeMove(preferredMoves[i]);
+                    break;
+                }
+            }
         }
 
         function checkWin(player) {
@@ -74,6 +79,10 @@
         }
 
         drawBoard();
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
