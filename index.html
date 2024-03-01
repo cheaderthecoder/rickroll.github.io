@@ -48,7 +48,7 @@
                     aiScore++;
                 }
                 document.getElementById('score').textContent = 'Player: ' + playerScore + ' AI: ' + aiScore;
-                setTimeout(restartGame, 2000);
+                setTimeout(restartGame, 1000);
                 return;
             }
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
