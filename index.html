@@ -62,7 +62,6 @@
         }
 
         function makeAIMove() {
-             var newAImove;
             var winningMove = getWinningMove('O');
             if (winningMove !== null) {
                 makeMove(winningMove);
@@ -74,9 +73,6 @@
             var defensiveMove = getWinningMove('X');
             if (defensiveMove !== null) {
                 makeMove(defensiveMove);
-                
-                newAImove = makeMove(defensiveMove).toString();
-                
                 return;
             }
             var preferredMoves = [4, 0, 2, 6, 8, 1, 3, 5, 7];
@@ -84,9 +80,6 @@
                 if (preferredMoves[i] !== lastAIMove && board[preferredMoves[i]] === null) {
                     lastAIMove = preferredMoves[i];
                     makeMove(preferredMoves[i]);
-                    
-                    newAImove = makeMove(preferredMoves[i]).toString();
-                    
                     break;
                 }
             }
