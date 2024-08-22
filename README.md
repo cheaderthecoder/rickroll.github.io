@@ -6,7 +6,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/cheaderthecoder/tic-tac-toe)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cheaderthecoder/tic-tac-toe)
 ![GitHub All Releases](https://img.shields.io/github/downloads/cheaderthecoder/tic-tac-toe/total)
-![License](https://img.shields.io/github/license/cheaderthecoder/tic-tac-toe)
+![LICENSE](https://img.shields.io/github/license/cheaderthecoder/tic-tac-toe)
 ![Maintenance](https://img.shields.io/maintenance/no/2024)
 ---
 a simple Tic-tac-toe game made in frontend HTML, CSS, JS
