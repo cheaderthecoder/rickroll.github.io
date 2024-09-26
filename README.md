@@ -17,3 +17,5 @@ Tic-Tac-Toe is a classic game where two players, X and O, take turns marking spa
 You can play the game by visiting this link (add your live demo link here).
 
 # 🚀 Features
+
+    Single Player Mode: Play against a simple AI opponen
