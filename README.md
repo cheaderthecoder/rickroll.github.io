@@ -19,3 +19,8 @@ You can play the game by visiting this link (add your live demo link here).
 # 🚀 Features
 
     Single Player Mode: Play against a simple AI opponen
+
+
+
+## LICENSE
+this project is under the [GNU General Public License v3.0](https://github.com/cheaderthecoder/tic-tac-toe/blob/main/LICENSE)
