@@ -15,3 +15,5 @@ a simple Tic-tac-toe game made in frontend HTML, CSS, JS
 Tic-Tac-Toe is a classic game where two players, X and O, take turns marking spaces on a 3x3 grid. The goal is to be the first player to place three of their marks in a horizontal, vertical, or diagonal row.
 
 You can play the game by visiting this link (add your live demo link here).
+
+🚀 Features
