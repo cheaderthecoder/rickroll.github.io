@@ -10,3 +10,5 @@
 ![Maintenance](https://img.shields.io/maintenance/no/2024)
 ---
 a simple Tic-tac-toe game made in frontend HTML, CSS, JS
+
+🕹️ Play the Game
