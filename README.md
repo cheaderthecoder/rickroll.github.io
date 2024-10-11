@@ -18,7 +18,7 @@ You can play the game by visiting this link (add your live demo link here).
 
 # 🚀 Features
 
-    Single Player Mode: Play against a simple AI opponen
+    Single Player Mode: Play against a simple AI opponent
 
 
 
