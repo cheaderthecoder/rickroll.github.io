@@ -9,7 +9,7 @@
 ![LICENSE](https://img.shields.io/github/license/cheaderthecoder/tic-tac-toe)
 ![Maintenance](https://img.shields.io/maintenance/no/2024)
 ---
-a simple Tic-tac-toe game made in frontend HTML, CSS, JS
+a simple Tic-tac-toe game made in HTML, CSS, JS
 
 # 🕹️ Play the Game
 Tic-Tac-Toe is a classic game where two players, X and O, take turns marking spaces on a 3x3 grid. The goal is to be the first player to place three of their marks in a horizontal, vertical, or diagonal row.
